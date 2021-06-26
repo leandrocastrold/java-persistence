@@ -11,14 +11,14 @@ Tecnologias utilizadas (até agora)
 * MySQL Connector (Driver MySQL para JDBC)
 * JDBC 
 
-###Instalação
+<h3>Instalação</h3>
 
 Para baixar o projeto na sua máquina, use o comando:
 
 ```
 git clone https://github.com/leandrocastrold/java-persistence.git
 ```
-###Configuração
+<h3>Configuração</h3>
 
 O projeto utiliza o driver MySQL para conexão com o banco. Para utilizar outro banco, baixe o driver correspondente e insira sua dependência no arquivo <i>Pom.xml</i>, na seção <i>Dependency</i>.
 
