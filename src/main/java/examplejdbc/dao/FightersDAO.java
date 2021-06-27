@@ -1,7 +1,7 @@
-package exemplojdbc.dao;
+package examplejdbc.dao;
 
-import exemplojdbc.ConnectionFactory;
-import exemplojdbc.classes.MKFighter;
+import examplejdbc.ConnectionFactory;
+import examplejdbc.classes.MKFighter;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

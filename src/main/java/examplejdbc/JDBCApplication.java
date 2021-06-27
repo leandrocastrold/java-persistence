@@ -1,11 +1,11 @@
-package exemplojdbc;
+package examplejdbc;
 
-import exemplojdbc.classes.MKFighter;
-import exemplojdbc.dao.FightersDAO;
+import examplejdbc.classes.MKFighter;
+import examplejdbc.dao.FightersDAO;
 
 import java.sql.SQLException;
 
-public class Application {
+public class JDBCApplication {
     public static void main(String[] args) throws SQLException {
 
         FightersDAO fightersDAO = new FightersDAO();

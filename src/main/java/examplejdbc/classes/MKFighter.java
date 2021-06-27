@@ -1,4 +1,4 @@
-package exemplojdbc.classes;
+package examplejdbc.classes;
 
 public class MKFighter {
 

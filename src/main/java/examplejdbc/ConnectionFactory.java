@@ -1,4 +1,4 @@
-package exemplojdbc;
+package examplejdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
