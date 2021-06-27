@@ -3,7 +3,8 @@ package examplehibernate;
 import javax.persistence.*;
 
 @Entity
-public class SFFighters {
+@Table(name = "sffighters")
+public class SFFighter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,14 +16,15 @@ public class SFFighters {
     @Column(nullable = false)
     private char gender;
 
-    public SFFighters(int id, String name, String country, char gender) {
+    public SFFighter() {}
+    public SFFighter(int id, String name, String country, char gender) {
         this.id = id;
         this.name = name;
         this.country = country;
         this.gender = gender;
     }
 
-    public SFFighters(String name, String country, char gender) {
+    public SFFighter(String name, String country, char gender) {
         this.name = name;
         this.country = country;
         this.gender = gender;
