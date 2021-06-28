@@ -10,7 +10,7 @@ public class HibernateApplication {
 
         //CRUD
         // Get By ID
-        //sfFighterService.getFighter(id);
+        //sfFighterService.getFighterById(id);
 
         //Insert new fighter
         //sfFighterService.insertSFFighter(sfFighter);

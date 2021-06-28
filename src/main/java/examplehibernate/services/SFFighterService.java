@@ -1,13 +1,27 @@
 package examplehibernate.services;
 
-import examplehibernate.SFFighter;
+import examplehibernate.models.SFFighter;
 import examplehibernate.repository.SFFighterRepository;
+
+import java.util.List;
 
 public class SFFighterService {
 
     private SFFighterRepository repository = new SFFighterRepository();
 
-    public SFFighter getFighter(int fighterId) {
+    public List<SFFighter> getfighters() {
+         return repository.listAll();
+    }
+
+    public List<SFFighter> getFightersByCountry(String country) {
+        return repository.listByCountry(country);
+    }
+
+    public List<SFFighter> getFightersByGender(char gender) {
+        return repository.listByGender(gender);
+    }
+
+    public SFFighter getFighterById(int fighterId) {
         return repository.findById(fighterId);
     }
 

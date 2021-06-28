@@ -1,4 +1,4 @@
-package examplehibernate;
+package examplehibernate.models;
 
 import javax.persistence.*;
 
