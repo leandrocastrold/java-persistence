@@ -10,84 +10,59 @@ import java.util.Locale;
 
 public class SFFighterRepository {
 
-    private EntityManagerFactory entityManagerFactory;
-    private EntityManager entityManager;
+
 
     //JPA
-    public SFFighter findById(int id) {
-        createManagers();
+    public SFFighter findById(int id, EntityManager entityManager) {
         SFFighter fighter = entityManager.find(SFFighter.class, id);
-        closeManagers();
         return fighter;
     }
 
-    public void save(SFFighter sfFighter) {
-        createManagers();
+    public void save(SFFighter sfFighter, EntityManager entityManager) {
         entityManager.getTransaction().begin();
         entityManager.persist(sfFighter);
         entityManager.getTransaction().commit();
-        closeManagers();
     }
 
-    public void delete(int id) {
-        createManagers();
+    public void delete(int id, EntityManager entityManager) {
         entityManager.getTransaction().begin();
         SFFighter sfFighter = entityManager.find(SFFighter.class, id);
         entityManager.remove(sfFighter);
         entityManager.getTransaction().commit();
-        closeManagers();
     }
 
-    public void update(SFFighter sfFighter) {
-        createManagers();
+    public void update(SFFighter sfFighter, EntityManager entityManager) {
         entityManager.getTransaction().begin();
         entityManager.merge(sfFighter);
         entityManager.getTransaction().commit();
-        closeManagers();
     }
 
     //JPQL
 
-    public List<SFFighter> listAll() {
-        createManagers();
+    public List<SFFighter> listAll(EntityManager entityManager) {
         String sqlCommand = "select a from SFFighter a";
         List<SFFighter> list = entityManager
                 .createQuery(sqlCommand, SFFighter.class)
                 .getResultList();
-        closeManagers();
         return list;
     }
 
-    public List<SFFighter> listByCountry(String country) {
-        createManagers();
+    public List<SFFighter> listByCountry(String country, EntityManager entityManager) {
         String sqlCommand = "select a from SFFighter a where a.country = :country";
         List<SFFighter> list = entityManager
                 .createQuery(sqlCommand, SFFighter.class)
                 .setParameter("country", country)
                 .getResultList();
-        closeManagers();
         return list;
     }
 
-    public List<SFFighter> listByGender(char gender) {
-        createManagers();
+    public List<SFFighter> listByGender(char gender, EntityManager entityManager) {
         String sqlCommand = "select a from SFFighter a where a.gender = :gender";
         List<SFFighter> list = entityManager
                 .createQuery(sqlCommand, SFFighter.class)
                 .setParameter("gender", gender)
                 .getResultList();
-        closeManagers();
         return list;
-    }
-
-    private void createManagers() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("sffighter");
-        entityManager = entityManagerFactory.createEntityManager();
-    }
-
-    private void closeManagers() {
-        entityManager.close();
-        entityManagerFactory.close();
     }
 
 
