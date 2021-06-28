@@ -39,7 +39,11 @@ Acesse a classe <i>ConnectionFactory</i> e altere a string de conexão, usuário
 </p>
 
 <strong>Hibernate - JPA</strong>
-<p>Inicialize a aplicação pela classe <i>HibernateApplication</i> para executar o <i>examplehibernate</i>
+<p>Inicialize a aplicação pela classe <i>HibernateApplication</i> para executar o <i>examplehibernate</i> utilizando consultas simples com JPA.
+</p>
+
+<strong>Hibernate - JPQL</strong>
+<p>Inicialize a aplicação pela classe <i>JPQLApplication</i> para executar o <i>examplehibernate</i> utilizando consultas em JPQL.
 </p>
 
 

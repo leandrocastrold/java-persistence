@@ -13,8 +13,8 @@ public class JPQLApplication {
 
         // Queries using JPQL - Java Persistence Query Language
 
-        // To list all fighers
-        // List<SFFighter> fighters = sfFighterService.getfighters();
+        // To list all fighters
+        // List<SFFighter> fighters = sfFighterService.getFighters();
 
         // To list fighter by country
         //List<SFFighter> fighters = sfFighterService.getFightersByCountry("Brazil");
