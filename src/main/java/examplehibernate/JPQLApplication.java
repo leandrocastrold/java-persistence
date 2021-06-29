@@ -15,7 +15,7 @@ public class JPQLApplication {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("sffighter");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-        SFFighterService sfFighterService = new SFFighterService();
+        SFFighterService sfFighterService = new SFFighterService(entityManager);
 
         // Queries using JPQL - Java Persistence Query Language
 

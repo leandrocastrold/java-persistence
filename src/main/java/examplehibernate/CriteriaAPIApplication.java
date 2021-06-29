@@ -6,29 +6,25 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class HibernateApplication {
+public class CriteriaAPIApplication {
 
     public static void main(String[] args) {
-
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("sffighter");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         SFFighterService sfFighterService = new SFFighterService(entityManager);
 
-        //CRUD
-        // Get By ID
-        //System.out.println(sfFighterService.getFighterById(id, entityManager));
+        //GET
+        //sfFighterService.getWithCriteria().stream().forEach(System.out::println);
 
-        //Insert new fighter
-        //sfFighterService.insertSFFighter(sfFighter, entityManager);
+        //GET BY ID
+        // System.out.println(sfFighterService.getByIdWithCriteria(3));
+        //GET BY ORDER
+        //Ascendant
+        //sfFighterService.getOrderedList(true).stream().forEach(System.out::println);
+        //Descendant
+        //sfFighterService.getOrderedList(false).stream().forEach(System.out::println);
 
-        //Delete Fighter
-        //sfFighterService.deleteFighter(id, entityManager);
-
-        //Update Fighter
-        //sfFighterService.updateFighter(id, sfFighter, entityManager);
-
-        entityManager.close();
-        entityManagerFactory.close();
     }
+
 }
