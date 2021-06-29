@@ -25,6 +25,9 @@ public class CriteriaAPIApplication {
         //Descendant
         //sfFighterService.getOrderedList(false).stream().forEach(System.out::println);
 
+        entityManager.close();
+        entityManagerFactory.close();
+
     }
 
 }

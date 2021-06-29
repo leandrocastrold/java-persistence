@@ -20,13 +20,13 @@ public class JPQLApplication {
         // Queries using JPQL - Java Persistence Query Language
 
         // To list all fighters
-       // List<SFFighter> fighters = sfFighterService.getFighters(entityManager);
+       // List<SFFighter> fighters = sfFighterService.getFighters();
 
         // To list fighter by country
-        //List<SFFighter> fighters = sfFighterService.getFightersByCountry("Brazil", entityManager);
+        //List<SFFighter> fighters = sfFighterService.getFightersByCountry("Brazil");
 
         // To list fighter by gender
-        //List<SFFighter> fighters = sfFighterService.getFightersByGender('m', entityManager);
+        //List<SFFighter> fighters = sfFighterService.getFightersByGender('m');
 
       // fighters.stream().forEach(System.out::println);
 

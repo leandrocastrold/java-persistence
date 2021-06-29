@@ -17,16 +17,16 @@ public class HibernateApplication {
 
         //CRUD
         // Get By ID
-        //System.out.println(sfFighterService.getFighterById(id, entityManager));
+        //System.out.println(sfFighterService.getFighterById(id));
 
         //Insert new fighter
-        //sfFighterService.insertSFFighter(sfFighter, entityManager);
+        //sfFighterService.insertSFFighter(sfFighter);
 
         //Delete Fighter
-        //sfFighterService.deleteFighter(id, entityManager);
+        //sfFighterService.deleteFighter(id);
 
         //Update Fighter
-        //sfFighterService.updateFighter(id, sfFighter, entityManager);
+        //sfFighterService.updateFighter(id, sfFighter);
 
         entityManager.close();
         entityManagerFactory.close();

@@ -34,17 +34,19 @@ Acesse a classe <i>ConnectionFactory</i> e altere a string de conexão, usuário
 
 <h3>Execução</h3>
 
-<strong>JDBC</strong>
+<strong><i>JDBC</i></strong>
 <p> Inicialize a aplicação pela classe <i>JDBCApplication</i> para executar o <i>examplejdbc</i>.
 </p>
 
-<strong>Hibernate - JPA</strong>
+<strong><i>Hibernate - JPA</i></strong>
 <p>Inicialize a aplicação pela classe <i>HibernateApplication</i> para executar o <i>examplehibernate</i> utilizando consultas simples com JPA.
 </p>
 
-<strong>Hibernate - JPQL</strong>
+<strong><i>Hibernate - JPQL</i></strong>
 <p>Inicialize a aplicação pela classe <i>JPQLApplication</i> para executar o <i>examplehibernate</i> utilizando consultas em JPQL.
 </p>
 
+<strong><i>Hibernate - Criteria API</i></strong>
+<p>Inicialize a aplicação pela classe <i>CriteriaAPIApplication</i> para executar o <i>examplehibernate</i> utilizando consultas com Criteria API.
+</p>
 
-<h3>Projeto em Construção</h3>
